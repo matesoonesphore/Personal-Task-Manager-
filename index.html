@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tasks"></i> Personal Task Manager</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Enter a new task..." autocomplete="off">
+                    <button id="addTaskBtn" class="add-btn">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </div>
+                <div class="instructions">
+                    <p><i class="fas fa-lightbulb"></i> Press Enter to add a task or click the button</p>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-box">
+                    <span class="stat-count" id="totalTasks">0</span>
+                    <span class="stat-label">Total Tasks</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-count" id="pendingTasks">0</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-count" id="completedTasks">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            
+            <section class="task-list-section" id="taskListSection">
+                <h2><i class="fas fa-list-check"></i> Task List</h2>
+                <p class="empty-message" id="emptyMessage">No tasks yet. Add your first task above!</p>
+                <ul id="taskList">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+            </section>
+           
+           
+            <div class="task-actions">
+                <button id="clearCompletedBtn" class="action-btn">
+                    <i class="fas fa-check-double"></i> Clear Completed
+                </button>
+                <button id="clearAllBtn" class="action-btn secondary">
+                    <i class="fas fa-trash-alt"></i> Clear All Tasks
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Personal Task Manager &copy; 2026 | Made with <i class="fas fa-heart"></i></p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
